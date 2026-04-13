@@ -75,9 +75,9 @@ with col2:
 with col3:
     # Use Streamlit's built-in alert boxes to show the 2nd Law status
     if s_gen < 0:
-        st.error("️ Violates 2nd Law")
+        st.error("️ Violates the 2nd Law!")
     else:
-        st.success(" Theoretically Possible")
+        st.success("     Theoretically Possible.")
 
 import matplotlib.patches as patches
 
@@ -138,8 +138,8 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 st.markdown('<div style="margin-top: -50px;"></div>', unsafe_allow_html=True)
 
 # Plot 1: Temperature
-ax1.plot(f_array, TC_valid, 'b-', linewidth=2, label='Possible (s_gen >= 0)')
-ax1.plot(f_array, TC_invalid, 'r--', linewidth=2, label='Impossible (s_gen < 0)')
+ax1.plot(f_array, TC_valid, 'b-', linewidth=2, label='Possible (σ gen >= 0)')
+ax1.plot(f_array, TC_invalid, 'r--', linewidth=2, label='Impossible (σ gen < 0)')
 ax1.plot(f, T_C, 'ko', markersize=8, markerfacecolor='yellow', label='Current Point')
 ax1.set_xlabel('Cold Fraction (f)')
 ax1.set_ylabel('Cold Outlet Temperature [K]')
